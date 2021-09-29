@@ -18,7 +18,7 @@ const NavBar = ({ user }) => {
             <NavLink className="nav-link" to="/register"><i className="fa fa-user-plus" aria-hidden="true"></i> Register</NavLink>
           </React.Fragment>
           }
-          {!user && <React.Fragment>
+          {user && <React.Fragment>
             <NavLink className="nav-link" to="/profile"><i className="fa fa-user" aria-hidden="true"></i> {user}</NavLink>
             <NavLink className="nav-link" to="/logout"><i className="fa fa-sign-out" aria-hidden="true"></i> Logout</NavLink>
           </React.Fragment>

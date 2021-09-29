@@ -84,7 +84,6 @@ class Movies extends React.Component {
   }
 
   render() {
-    const { length: count } = this.state.movies;
     const { genres, selectedGenre, sortColumn, searchQuery } = this.state;
     const { user } = this.props;
 

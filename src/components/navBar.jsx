@@ -13,15 +13,15 @@ const NavBar = ({ user }) => {
           <NavLink className="nav-link" aria-current="page" to="/movies">Movies</NavLink>
           <NavLink className="nav-link" to="/customers">Customers</NavLink>
           <NavLink className="nav-link" to="/rentals">Rentals</NavLink>
-          {!user && <React.Fragment>
+          {!user && (<React.Fragment>
             <NavLink className="nav-link" to="/login"><i className="fa fa-sign-in" aria-hidden="true"></i> Login</NavLink>
             <NavLink className="nav-link" to="/register"><i className="fa fa-user-plus" aria-hidden="true"></i> Register</NavLink>
-          </React.Fragment>
+          </React.Fragment>)
           }
-          {user && <React.Fragment>
-            <NavLink className="nav-link" to="/profile"><i className="fa fa-user" aria-hidden="true"></i> {user}</NavLink>
+          {user && (<React.Fragment>
+            <NavLink className="nav-link" to="/profile"><i className="fa fa-user" aria-hidden="true"></i> {user.name}</NavLink>
             <NavLink className="nav-link" to="/logout"><i className="fa fa-sign-out" aria-hidden="true"></i> Logout</NavLink>
-          </React.Fragment>
+          </React.Fragment>)
           }
         </div>
       </div>
